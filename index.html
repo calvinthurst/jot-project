@@ -17,24 +17,82 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
+    <section class="row justify-content-between m-0">
+      <div class="col-3 d-flex jot-O justify-content-evenly">
+        <h1 class="jot-border text-center">J</h1>
+        <h1 class="jot-border text-center">O</h1>
+        <h1 class="jot-border text-center">T</h1>
+        <h1 class="jot-border text-center">S</h1>
+        <h4 class="fw-bold"><i class=" mdi mdi-circle-outline"></i></h4>
+      </div>
+      <div class="col-1">
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">JOTS</button>
+      </div>
+    </section>
+    <!-- <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
       <a class="navbar-brand ms-3" href="#">
         <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
           loading="lazy">
         <span class="ms-2">jot-project</span>
       </a>
-    </nav>
+    </nav> -->
   </header>
   <main>
+
+
+
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+      aria-labelledby="offcanvasWithBothOptionsLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title text-center" id="jotsNum">Jots: </h5>
+      </div>
+      <div class="offcanvas-body">
+        <div id="jots"></div>
+        <label class="jot-O m-1">Create a Jot here</label>
+        <form class="d-flex" onsubmit="app.jotsController.createJot()">
+          <input class="container-fluid border-rounded" type="text" name="title">
+          <input type="color" class="form-control form-control-color" id="jotColor" value="#563d7c"
+            title="Choose your color" name="color">
+          <button class="btn btn-primary-outline" data-bs-dismiss="offcanvas"><i
+              class="mdi mdi-plus-circle"></i></button>
+        </form>
+      </div>
+    </div>
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <div id="app"></div>
+      <div class="row flex-wrap d-flex justify-content-evenly m-0">
+
+        <!-- <div id="jots"></div>
+          <form onsubmit="app.jotsController.createJot()">
+            <input class="container-fluid" type="text" name="title">
+            <input type="color" class="form-control form-control-color" id="jotColor" value="#563d7c"
+              title="Choose your color" name="color">
+          </form> -->
+        <!-- <div class="d-flex justify-content-between">
+            <p>Title</p>
+            <p><i class="mdi mdi-circle"></i></p>
+            <p>Created</p>
+          </div> -->
+
+        <div class="col-11" id="activeJot">
+          <!-- <div class="row">
+            <div class="col-3">
+              <h3>this is a jot</h3>
+              <p>Created at: 11/11/2022 10:30</p>
+              <p>Last Save: 11/11/2022 10:30</p>
+            </div>
+            <div class="col-8 d-flex">
+              <form class="col-12">
+                <textarea name="jotNote" id="" class="container-fluid" rows="10"></textarea>
+              </form>
+            </div>
+          </div> -->
         </div>
       </div>
     </div>
   </main>
   <footer class="bg-dark text-light">
+    <div id="app"></div>
     <div class="text-center no-select">
       <p><small>Made with 💖 by CodeWorks</small></p>
     </div>

@@ -1,1 +1,30 @@
 /* BASIC STYLES HERE */
+.active-jot {
+  min-height: 29em;
+  resize: none;
+}
+
+.note-border {
+  border: solid 1px rgb(21, 21, 90);
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 2px;
+  margin: 0;
+}
+
+body {
+  background-color: hsla(180, 82%, 91%, 0.674);
+}
+
+.jot-border {
+  border: solid 4px rgb(21, 21, 90);
+  border-radius: 55%;
+  color: rgb(21, 21, 90);
+  width: 8vh;
+  height: 8vh;
+}
+
+.jot-O {
+  align-items: flex-end;
+  color: rgb(21, 21, 90);
+}

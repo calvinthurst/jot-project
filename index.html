@@ -51,7 +51,7 @@
         <div id="jots"></div>
         <label class="jot-O m-1">Create a Jot here</label>
         <form class="d-flex" onsubmit="app.jotsController.createJot()">
-          <input class="container-fluid border-rounded" type="text" name="title">
+          <input class="container-fluid border-rounded" minlength="3" maxlength="15" type="text" required name="title">
           <input type="color" class="form-control form-control-color" id="jotColor" value="#563d7c"
             title="Choose your color" name="color">
           <button class="btn btn-primary-outline" data-bs-dismiss="offcanvas"><i

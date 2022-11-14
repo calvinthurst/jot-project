@@ -22,6 +22,7 @@ body {
   color: rgb(21, 21, 90);
   width: 8vh;
   height: 8vh;
+  user-select: none;
 }
 
 .jot-O {
